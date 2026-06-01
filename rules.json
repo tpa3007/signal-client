@@ -1,0 +1,15 @@
+{
+  "version": "client-rules-v1",
+  "mode": "client_read_only",
+  "thresholds": {
+    "max_single_position_pct": 0.2,
+    "near_deadline_days": 7,
+    "review_loss_pct": -0.25
+  },
+  "privacy": {
+    "share_default_if_endpoint_configured": true,
+    "include_wallet_in_run_report_by_default": false,
+    "allow_wallet_identity_only_with_consent_wallet": true
+  },
+  "boundary": "Research/education only. No financial advice. No trades are created."
+}
