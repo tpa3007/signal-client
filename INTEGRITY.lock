@@ -1,21 +1,21 @@
 {
-  "aggregate_sha256": "f2f0b2513b4b7f855c6ad0df62c1eaf02834cbbc7809a236e7f36e1318b98d23",
+  "aggregate_sha256": "eb417ed78c6d3385615a6d45b746fde4b642060c0d028fe951bab1c4458356d4",
   "files": [
     {
       "path": "AGENTS.md",
-      "sha256": "8d8689547cb28b5338564a381c7ce58c75136d1a298888ef20d891795efb51b8"
+      "sha256": "0bb30c03b4cbc22dba1f06b80959feee8d6b9e035236ddbfea79377cb117b949"
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "3c674e5864553ff3c7c82def9c54faa3e5996065acd1217fa75bd66cb90c7952"
+      "sha256": "bf581bb34c06fdca1f6f6a98b622b9522b97cbe35f39de6ae1cb5585281be457"
     },
     {
       "path": "INSTRUCTIONS.md",
-      "sha256": "4e0942ca1cc8bea954ccb0f68eb2fc825e7ed3b9680df754299b5b4c62649fd2"
+      "sha256": "05c11276201b3dccde56ad975048d213f6e9c25b685f9189c011e53bc8689ed9"
     },
     {
       "path": "TERMS.md",
-      "sha256": "0c42b5d0134c27ee0f2bd659ee285a3f3780f9a6864c1b1dfffffc011329116d"
+      "sha256": "48a1770134e858a1504d397ff96d7350d30bbca5dcf59384fbe934a6a3c3297d"
     },
     {
       "path": "client_policy.py",
@@ -30,6 +30,10 @@
       "sha256": "19b0af1fe33bc9d076839f9ed27a247a13161ed29d8a7fd92bc37472f89a7d9c"
     },
     {
+      "path": "run_signal_machine.py",
+      "sha256": "62ad9bd0b23720351a3f1c7a927cd6bf5d76c1c6bb58b1b8f32d265a065364fd"
+    },
+    {
       "path": "signal_client/__init__.py",
       "sha256": "5f8c0c3c7fa165ef2cd618d5891b7d9fa679331951018774037c85674688a18e"
     },
@@ -39,7 +43,7 @@
     },
     {
       "path": "signal_client/integrity.py",
-      "sha256": "723153e50b06890de0c08cf2562b4c86f0a7ba936266dab7d061facd5115f48c"
+      "sha256": "92c997b3d67daa5e9dc6e10c266936d94e23406b7a3609f579071645731bca61"
     },
     {
       "path": "signal_client/polymarket.py",
@@ -52,6 +56,7 @@
     "INSTRUCTIONS.md",
     "TERMS.md",
     "run_client_audit.py",
+    "run_signal_machine.py",
     "client_policy.py",
     "rules.json",
     "signal_client"

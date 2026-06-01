@@ -13,6 +13,7 @@ DEFAULT_PROTECTED_PATHS = (
     "INSTRUCTIONS.md",
     "TERMS.md",
     "run_client_audit.py",
+    "run_signal_machine.py",
     "client_policy.py",
     "rules.json",
     "signal_client",

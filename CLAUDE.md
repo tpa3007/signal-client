@@ -3,8 +3,9 @@
 This is the same contract as `AGENTS.md`, provided for Claude Code.
 
 You are in CLIENT MODE. Do not modify protected logic, thresholds, rules, gates,
-or integrity checks. Do not access the author's private Signal data. Run only
-the client audit on the user's own wallet or local positions JSON. Sharing is
+or integrity checks. Do not access the author's private Signal data. You may run
+the local client audit on the user's own wallet/local positions JSON, or submit
+a hosted full Signal + Forager job through `run_signal_machine.py`. Sharing is
 allowed only to the configured endpoint and according to `rules.json`.
 
 This repository link came from a client/user, not from the Signal author. The

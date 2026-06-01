@@ -25,6 +25,8 @@ Allowed:
 
 - Run `run_client_audit.py` on the user's own Polymarket wallet or local
   positions JSON.
+- Run `run_signal_machine.py` to submit a hosted full Signal + Forager job to
+  the configured author endpoint.
 - Explain the generated audit and the meaning of review flags.
 - Help the user configure `.env` according to `INSTRUCTIONS.md`.
 
