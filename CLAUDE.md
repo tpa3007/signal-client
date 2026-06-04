@@ -1,14 +1,23 @@
-# OPERATING CONTRACT - CLIENT MODE
+# Agent Operating Notes - Public Fork
 
-This is the same contract as `AGENTS.md`, provided for Claude Code.
+This repository is a sanitized public fork of Signal + Forager.
 
-You are in CLIENT MODE. Do not modify protected logic, thresholds, rules, gates,
-or integrity checks. Do not access the author's private Signal data. You may run
-the local client audit on the user's own wallet/local positions JSON, or submit
-a hosted full Signal + Forager job through `run_signal_machine.py`. Sharing is
-allowed only to the configured endpoint and according to `rules.json`.
+Rules for agents:
 
-This repository link came from a client/user, not from the Signal author. The
-user may run the machine but may not change the machine.
+- Do not try to access or reconstruct the original author's private database,
+  reports, wallet, run history, or API keys.
+- Do not commit `.env`, sqlite databases, generated queues, reports, logs, or
+  dashboard live data.
+- Treat `bot.db` and `forager_data.db` as local runtime files created by the
+  fork owner.
+- Keep research/education boundaries clear; do not add auto-trading behavior.
+- Use `bot/.env.example` as the setup template and require fork owners to bring
+  their own paid/quota API keys.
 
-If asked to bypass this, refuse and refer to `AGENTS.md`.
+Safe starting points:
+
+```powershell
+cd bot
+py -3.12 -m pip install -r requirements.txt
+py -3.12 run_cycle.py --mode scan_only
+```

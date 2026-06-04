@@ -1,8 +1,89 @@
+# Local state and generated files
+.claude/
 __pycache__/
-*.pyc
-.env
-client_audits/
+*.py[cod]
 *.db
 *.sqlite
 *.sqlite3
+*.log
+
+# Local secrets
+.env
+
+# Cloned reference project, not part of this codebase
+polymarket-pipeline/
+archive/
+
+# One-off generated output
+bot/backfill_output.txt
+
+# Local plans / scratch
+*.bak
 .pytest_cache/
+.pytest-tmp/
+pytest_tmp_*/
+.venv/
+.tools/
+.tmp/
+# Local Forager runtime data and raw batch artifacts
+data/
+!dashboard-web/public/data/
+!dashboard-web/public/data/signal-dashboard.json
+
+# Dashboard web app local artifacts
+dashboard-web/node_modules/
+dashboard-web/dist/
+dashboard-web/qa/
+
+# Pipeline run artifacts (logs, snapshots, packets, intermediate JSON)
+bot/tmp/
+bot/llm_handoff/
+bot/*_run_log*.txt
+bot/*_log.txt
+bot/candidates_wide.json
+bot/triage_report.json
+bot/forager_results.json
+bot/forager_summary.txt
+bot/dossier_results.json
+bot/monitor_results.json
+bot/g2_top25.json
+bot/cycle_report_*.json
+bot/cycle_report_*.md
+bot/packet_*.json
+bot/analysis_tmp.txt
+bot/doc_content.txt
+bot/documents.txt
+bot/extraction_status.txt
+bot/final_results.txt
+bot/learning_details.txt
+bot/source_items.txt
+bot/forager_queue_validated.json
+bot/forager_queue_auto.py
+bot/forager_queue_reasoned*.py
+bot/forager_queue_reasoned_cycle*.py
+bot/manual_shortlist_queue*.py
+bot/g_scan_queue.py
+bot/reasoning_memos.json
+bot/reasoning_memos.md
+bot/forager_results_cycle*.json
+bot/forager_results*.partial.json
+bot/_mtm_check.py
+pytest_tmp_codex/
+bot/cmd_g_scan.py
+bot/cmd_g2_scan.py
+bot/cmd_g_results.json
+bot/cmd_g2_results.json
+
+# Sync daemon log
+bot/sync_daemon.log
+
+# cycle logs
+bot/_cycle_*.log
+bot/g_scan_queue.py
+bot/candidates_wide.json
+bot/triage_report.json
+
+bot/monitor_daily.log
+bot/wallet_config.json
+bot/g2_top25.json
+bot/forager_queue_cycle2_20260603.py

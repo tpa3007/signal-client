@@ -1,0 +1,19 @@
+[project]
+name = "signal-forager"
+version = "0.1.0"
+description = "Cognitive foraging layer for Signal"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2.0.0",
+  "fastapi>=0.110.0",
+  "uvicorn>=0.27.0",
+  "deep-translator>=1.9.1",
+]
+
+[project.optional-dependencies]
+crawl = ["trafilatura>=1.6.0", "newspaper3k>=0.2.8"]
+all = ["trafilatura>=1.6.0", "newspaper3k>=0.2.8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

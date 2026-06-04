@@ -1,37 +1,46 @@
-# signal-client
+# Signal + Forager
 
-Public, data-free Signal client artifact.
+Public, source-only fork of the Signal research system and Forager research
+engine. This export intentionally contains no author database, personal
+portfolio, real-money positions, local run reports, queues, logs, or API keys.
 
-It has two modes:
+## What Is Included
 
-- `run_client_audit.py`: local lightweight portfolio audit.
-- `run_signal_machine.py`: hosted full Signal + Forager run. The full engine
-  runs on the author's private worker; this repository only submits the job and
-  stores the resulting report.
+- `bot/`: Signal command runners, MCP tools, scoring/risk/research helpers,
+  tests, and migrations.
+- `forager/`: recursive research engine, search/crawl/extraction graph, tests.
+- `dashboard-web/`: dashboard source with empty public data placeholders.
+- `api/`: client run and ingest API contracts.
+- `client_src/`: lightweight public client/launcher tools.
+- `docs/Signal/`: architecture, protocol, technical, workflow, and manual docs
+  with personal reports excluded.
 
-It does not contain the author's private `bot.db`, Signal ledger, reports,
-calibration history, real-money positions, or full Signal/Forager source code.
+## What Is Not Included
 
-The intended flow is:
+- `bot.db`, `forager.db`, sqlite backups, wallet config, `.env`, API keys.
+- Generated queues/results/reasoning memos/manual shortlist reports.
+- Real-money portfolio history and dashboard live portfolio data.
+- Personal research reports under `docs/Signal/reports` and root `docs/*.md`.
 
-1. A user gives this GitHub repo link to Codex / Claude Code.
-2. The agent reads `AGENTS.md` / `CLAUDE.md` and enters CLIENT MODE.
-3. The agent helps configure the user's API/share settings.
-4. For lightweight local audit, the agent runs `run_client_audit.py`.
-5. For full Signal + Forager, the agent runs `run_signal_machine.py`.
-6. The user receives a local `.md` report, and the Signal author receives the
-   report + run metadata when the endpoint is configured.
-
-Run:
-
-```powershell
-python run_client_audit.py --wallet 0xYourPolymarketWallet
-```
-
-Hosted full run:
+## Setup
 
 ```powershell
-python run_signal_machine.py --wallet 0xYourPolymarketWallet --poll
+cd bot
+py -3.12 -m pip install -r requirements.txt
+copy .env.example .env
+py -3.12 -m pytest -q
 ```
 
-See `INSTRUCTIONS.md` and the client-mode contracts in `AGENTS.md`/`CLAUDE.md`.
+Free/keyless paths work without paid search keys where the code supports them.
+Paid or quota-limited providers such as Brave, Tavily, Anthropic, OpenAI,
+YouTube, Reddit, and ACLED must be configured by the fork owner in `.env`.
+
+## Run
+
+```powershell
+cd bot
+py -3.12 run_cycle.py --mode scan_only
+py -3.12 run_command_w.py --top 50
+```
+
+Research/education only. No auto-trading.

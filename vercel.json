@@ -1,0 +1,18 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "cd dashboard-web && npm install && npm run build",
+  "outputDirectory": "dashboard-web/dist",
+  "installCommand": "echo skip-root-install",
+  "framework": null,
+  "rewrites": [
+    { "source": "/((?!data/|api/).*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/data/signal-dashboard.json",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "generatedAt": null,
+    "totalSignals": 0,
+    "openSignals": 0,
+    "closedSignals": 0,
+    "realExposure": 0,
+    "paperExposure": 0,
+    "paperAccuracy": null,
+    "realizedPnl": 0,
+    "unrealizedPnl": 0,
+    "avgEdge": null
+  },
+  "signals": [],
+  "analytics": {},
+  "workflowRuns": [],
+  "modelEvolution": []
+}
